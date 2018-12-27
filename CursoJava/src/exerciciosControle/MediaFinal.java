@@ -30,5 +30,6 @@ public class MediaFinal {
 		} else {
 			System.out.println("Reprovado!");
 		}
+		scanner.close();
 	}
 }

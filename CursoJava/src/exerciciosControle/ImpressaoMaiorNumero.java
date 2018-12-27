@@ -22,6 +22,7 @@ public class ImpressaoMaiorNumero {
 			}
 		}
 		System.out.println("Maior número: " + tmp);
+		scanner.close();
 	}
 
 }

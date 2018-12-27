@@ -18,17 +18,26 @@ public class JogoDaAdivinhacao {
 		int numAleatorio;
 		int numero;
 		
-		numAleatorio = gerador.nextInt();
+		numAleatorio = gerador.nextInt(101);
 		
 		for (int i = 10; i > 0; i--) {
+			
+			System.out.println("Informe um número de 0-100: ");
 			numero = scanner.nextInt();
 			
-			if (numero == numAleatorio) {
-				System.out.println("Você adivinhou!");
-			} else {
-				System.out.printf("\nErrou!\n%dª Tentativa: ", i-1);
-			}
+			if (i == 1 && numero != numAleatorio) {
+				System.out.printf("\n\nVocê não conseguiu adivinhar o número: %d \n:(\n", numAleatorio);
+			} else if (numero == numAleatorio) {
+				System.out.println("\nVOCÊ ADIVINHOU!!");
+				break;
+			} else if (numero > numAleatorio) {
+				System.out.println("DICA! Seu número é MAIOR que o número secreto!");
+			} else if (numero < numAleatorio) {
+				System.out.println("DICA! Seu número é MENOR que o número secreto!");
+			} 
+			System.out.printf("\nRestam %d Tentativa(s) \n", i-1);
 		}
-		System.out.printf("\n\nVocê não conseguiu adivinhar o número: %d \n:(", numAleatorio);
+		
+		scanner.close();
 	}
 }

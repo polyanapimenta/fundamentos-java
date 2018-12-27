@@ -2,7 +2,7 @@ package controle;
 
 public class SwitchSemBreak {
 	public static void main(String[] args) {
-		String faixa = "branca";
+		String faixa = "preta";
 		
 		// uma vez que entra no case, sai executando todos os outros
 		switch (faixa.toLowerCase()) {

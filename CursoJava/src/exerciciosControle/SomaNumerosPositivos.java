@@ -25,5 +25,6 @@ public class SomaNumerosPositivos {
 		
 		//System.out.printf("Numero negativo: %d", numero);
 		System.out.println("Fim do programa!");
+		sc.close();
 	}
 }
